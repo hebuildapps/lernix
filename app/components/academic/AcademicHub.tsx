@@ -88,7 +88,7 @@ export default function AcademicHub({ content, subjects }: AcademicHubProps) {
                 {typeOptions.map(option => (
                   <button
                     key={option.value}
-                    onClick={() => setFilter(option.value as any)}
+                    onClick={() => setFilter(option.value as 'all' | 'lecture' | 'assignment' | 'quiz' | 'exam' | 'material')}
                     className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                       filter === option.value
                         ? 'bg-blue-600 text-white'

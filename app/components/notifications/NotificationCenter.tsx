@@ -61,7 +61,7 @@ export default function NotificationCenter({ notifications }: NotificationCenter
           {filterOptions.map(option => (
             <button
               key={option.value}
-              onClick={() => setFilter(option.value as any)}
+              onClick={() => setFilter(option.value as 'all' | 'unread' | 'attendance' | 'medical' | 'academic')}
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 filter === option.value
                   ? 'bg-blue-600 text-white'
