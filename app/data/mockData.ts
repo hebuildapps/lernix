@@ -67,7 +67,7 @@ export const mockSubjects: Subject[] = [
 ];
 
 // Static attendance data to ensure consistent values across page refreshes
-export const mockAttendanceData = [
+export const mockAttendanceData: AttendanceRecord[] = [
   // Data Structures & Algorithms - Total: 45 classes, Present: 40, Late: 3, Absent: 2
   {
     id: "att-2024-09-02-sub-001",
