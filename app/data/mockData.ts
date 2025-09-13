@@ -67,7 +67,7 @@ export const mockSubjects: Subject[] = [
 ];
 
 // Static attendance data to ensure consistent values across page refreshes
-export const mockAttendanceData: AttendanceRecord[] = [
+export const mockAttendanceData = [
   // Data Structures & Algorithms - Total: 45 classes, Present: 40, Late: 3, Absent: 2
   {
     id: "att-2024-09-02-sub-001",
@@ -1277,10 +1277,12 @@ export const mockAttendanceData: AttendanceRecord[] = [
     timeIn: "09:00",
     timeOut: "10:30",
   },
-].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+] as AttendanceRecord[];
+
+export const sortedMockAttendanceData = mockAttendanceData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const generateMockAttendance = (): AttendanceRecord[] => {
-  return mockAttendanceData;
+  return sortedMockAttendanceData;
 };
 
 export const mockMedicalLeaves: MedicalLeave[] = [

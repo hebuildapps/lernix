@@ -19,7 +19,7 @@ export default function Dashboard() {
   return (
     <Layout>
       <div className="space-y-8">
-        {/* Page Header */}
+        {/*Header*/}
         <div className="flex mt-14 items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">
@@ -35,7 +35,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Attendance Overview */}
+
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-6">
             Attendance Overview
@@ -43,13 +43,13 @@ export default function Dashboard() {
           <AttendanceStats attendanceData={attendanceData} />
         </section>
 
-        {/* Dashboard Grid */}
+
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
           <div className="xl:col-span-2 space-y-8">
-            {/* Attendance Heatmap */}
+            
             <AttendanceHeatmap attendanceData={attendanceData} />
 
-            {/* Subject Performance Summary */}
+
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 Subject Performance
@@ -97,10 +97,10 @@ export default function Dashboard() {
           </div>
 
           <div className="space-y-8">
-            {/* Notifications */}
+            
             <NotificationCenter notifications={mockNotifications} />
 
-            {/* Quick Actions */}
+
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 Quick Actions
@@ -146,7 +146,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Recent Activity */}
+
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-6">
             Recent Activity

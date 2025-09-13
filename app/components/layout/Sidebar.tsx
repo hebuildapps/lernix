@@ -98,7 +98,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                <span className="text-gray-600 font-medium">SJ</span>
+                <span className="text-gray-600 font-medium">HS</span>
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium text-gray-900 truncate">
