@@ -66,61 +66,154 @@ export const mockSubjects: Subject[] = [
   },
 ];
 
+// Static attendance data to ensure consistent values across page refreshes
+export const mockAttendanceData: AttendanceRecord[] = [
+  // Data Structures & Algorithms - Total: 45 classes, Present: 40, Late: 3, Absent: 2
+  { id: "att-2024-09-02-sub-001", studentId: "std-001", date: "2024-09-02", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-04-sub-001", studentId: "std-001", date: "2024-09-04", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-06-sub-001", studentId: "std-001", date: "2024-09-06", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-09-sub-001", studentId: "std-001", date: "2024-09-09", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-11-sub-001", studentId: "std-001", date: "2024-09-11", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-13-sub-001", studentId: "std-001", date: "2024-09-13", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-16-sub-001", studentId: "std-001", date: "2024-09-16", status: "late", subject: "Data Structures & Algorithms", timeIn: "09:15", timeOut: "10:30", notes: "Arrived 15 minutes late" },
+  { id: "att-2024-09-18-sub-001", studentId: "std-001", date: "2024-09-18", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-20-sub-001", studentId: "std-001", date: "2024-09-20", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-23-sub-001", studentId: "std-001", date: "2024-09-23", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-25-sub-001", studentId: "std-001", date: "2024-09-25", status: "absent", subject: "Data Structures & Algorithms" },
+  { id: "att-2024-09-27-sub-001", studentId: "std-001", date: "2024-09-27", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-30-sub-001", studentId: "std-001", date: "2024-09-30", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-02-sub-001", studentId: "std-001", date: "2024-10-02", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-04-sub-001", studentId: "std-001", date: "2024-10-04", status: "late", subject: "Data Structures & Algorithms", timeIn: "09:10", timeOut: "10:30", notes: "Arrived 10 minutes late" },
+  { id: "att-2024-10-07-sub-001", studentId: "std-001", date: "2024-10-07", status: "absent", subject: "Data Structures & Algorithms" },
+  { id: "att-2024-10-09-sub-001", studentId: "std-001", date: "2024-10-09", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-11-sub-001", studentId: "std-001", date: "2024-10-11", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-14-sub-001", studentId: "std-001", date: "2024-10-14", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-16-sub-001", studentId: "std-001", date: "2024-10-16", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-18-sub-001", studentId: "std-001", date: "2024-10-18", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-21-sub-001", studentId: "std-001", date: "2024-10-21", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-23-sub-001", studentId: "std-001", date: "2024-10-23", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-25-sub-001", studentId: "std-001", date: "2024-10-25", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-28-sub-001", studentId: "std-001", date: "2024-10-28", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-30-sub-001", studentId: "std-001", date: "2024-10-30", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-01-sub-001", studentId: "std-001", date: "2024-11-01", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-04-sub-001", studentId: "std-001", date: "2024-11-04", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-06-sub-001", studentId: "std-001", date: "2024-11-06", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-08-sub-001", studentId: "std-001", date: "2024-11-08", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-11-sub-001", studentId: "std-001", date: "2024-11-11", status: "late", subject: "Data Structures & Algorithms", timeIn: "09:20", timeOut: "10:30", notes: "Arrived 20 minutes late" },
+  { id: "att-2024-11-13-sub-001", studentId: "std-001", date: "2024-11-13", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-15-sub-001", studentId: "std-001", date: "2024-11-15", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-18-sub-001", studentId: "std-001", date: "2024-11-18", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-20-sub-001", studentId: "std-001", date: "2024-11-20", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-22-sub-001", studentId: "std-001", date: "2024-11-22", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-25-sub-001", studentId: "std-001", date: "2024-11-25", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-27-sub-001", studentId: "std-001", date: "2024-11-27", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-29-sub-001", studentId: "std-001", date: "2024-11-29", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-02-sub-001", studentId: "std-001", date: "2024-12-02", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-04-sub-001", studentId: "std-001", date: "2024-12-04", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-06-sub-001", studentId: "std-001", date: "2024-12-06", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-09-sub-001", studentId: "std-001", date: "2024-12-09", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-11-sub-001", studentId: "std-001", date: "2024-12-11", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-13-sub-001", studentId: "std-001", date: "2024-12-13", status: "present", subject: "Data Structures & Algorithms", timeIn: "09:00", timeOut: "10:30" },
+
+  // Database Management Systems - Total: 30 classes, Present: 24, Late: 1, Absent: 3, Excused: 2
+  { id: "att-2024-09-03-sub-002", studentId: "std-001", date: "2024-09-03", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-09-05-sub-002", studentId: "std-001", date: "2024-09-05", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-09-10-sub-002", studentId: "std-001", date: "2024-09-10", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-09-12-sub-002", studentId: "std-001", date: "2024-09-12", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-09-17-sub-002", studentId: "std-001", date: "2024-09-17", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-09-19-sub-002", studentId: "std-001", date: "2024-09-19", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-09-24-sub-002", studentId: "std-001", date: "2024-09-24", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-09-26-sub-002", studentId: "std-001", date: "2024-09-26", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-10-01-sub-002", studentId: "std-001", date: "2024-10-01", status: "absent", subject: "Database Management Systems" },
+  { id: "att-2024-10-03-sub-002", studentId: "std-001", date: "2024-10-03", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-10-08-sub-002", studentId: "std-001", date: "2024-10-08", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-10-10-sub-002", studentId: "std-001", date: "2024-10-10", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-10-15-sub-002", studentId: "std-001", date: "2024-10-15", status: "excused", subject: "Database Management Systems" },
+  { id: "att-2024-10-17-sub-002", studentId: "std-001", date: "2024-10-17", status: "excused", subject: "Database Management Systems" },
+  { id: "att-2024-10-22-sub-002", studentId: "std-001", date: "2024-10-22", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-10-24-sub-002", studentId: "std-001", date: "2024-10-24", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-10-29-sub-002", studentId: "std-001", date: "2024-10-29", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-10-31-sub-002", studentId: "std-001", date: "2024-10-31", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-11-05-sub-002", studentId: "std-001", date: "2024-11-05", status: "late", subject: "Database Management Systems", timeIn: "11:25", timeOut: "12:30", notes: "Arrived 25 minutes late" },
+  { id: "att-2024-11-07-sub-002", studentId: "std-001", date: "2024-11-07", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-11-12-sub-002", studentId: "std-001", date: "2024-11-12", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-11-14-sub-002", studentId: "std-001", date: "2024-11-14", status: "absent", subject: "Database Management Systems" },
+  { id: "att-2024-11-19-sub-002", studentId: "std-001", date: "2024-11-19", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-11-21-sub-002", studentId: "std-001", date: "2024-11-21", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-11-26-sub-002", studentId: "std-001", date: "2024-11-26", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-11-28-sub-002", studentId: "std-001", date: "2024-11-28", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-12-03-sub-002", studentId: "std-001", date: "2024-12-03", status: "absent", subject: "Database Management Systems" },
+  { id: "att-2024-12-05-sub-002", studentId: "std-001", date: "2024-12-05", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-12-10-sub-002", studentId: "std-001", date: "2024-12-10", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+  { id: "att-2024-12-12-sub-002", studentId: "std-001", date: "2024-12-12", status: "present", subject: "Database Management Systems", timeIn: "11:00", timeOut: "12:30" },
+
+  // Software Engineering - Total: 30 classes, Present: 29, Late: 1, Absent: 0
+  { id: "att-2024-09-02-sub-003", studentId: "std-001", date: "2024-09-02", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-09-04-sub-003", studentId: "std-001", date: "2024-09-04", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-09-09-sub-003", studentId: "std-001", date: "2024-09-09", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-09-11-sub-003", studentId: "std-001", date: "2024-09-11", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-09-16-sub-003", studentId: "std-001", date: "2024-09-16", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-09-18-sub-003", studentId: "std-001", date: "2024-09-18", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-09-23-sub-003", studentId: "std-001", date: "2024-09-23", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-09-25-sub-003", studentId: "std-001", date: "2024-09-25", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-09-30-sub-003", studentId: "std-001", date: "2024-09-30", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-10-02-sub-003", studentId: "std-001", date: "2024-10-02", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-10-07-sub-003", studentId: "std-001", date: "2024-10-07", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-10-09-sub-003", studentId: "std-001", date: "2024-10-09", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-10-14-sub-003", studentId: "std-001", date: "2024-10-14", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-10-16-sub-003", studentId: "std-001", date: "2024-10-16", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-10-21-sub-003", studentId: "std-001", date: "2024-10-21", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-10-23-sub-003", studentId: "std-001", date: "2024-10-23", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-10-28-sub-003", studentId: "std-001", date: "2024-10-28", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-10-30-sub-003", studentId: "std-001", date: "2024-10-30", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-11-04-sub-003", studentId: "std-001", date: "2024-11-04", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-11-06-sub-003", studentId: "std-001", date: "2024-11-06", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-11-11-sub-003", studentId: "std-001", date: "2024-11-11", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-11-13-sub-003", studentId: "std-001", date: "2024-11-13", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-11-18-sub-003", studentId: "std-001", date: "2024-11-18", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-11-20-sub-003", studentId: "std-001", date: "2024-11-20", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-11-25-sub-003", studentId: "std-001", date: "2024-11-25", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-11-27-sub-003", studentId: "std-001", date: "2024-11-27", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-12-02-sub-003", studentId: "std-001", date: "2024-12-02", status: "late", subject: "Software Engineering", timeIn: "14:15", timeOut: "15:30", notes: "Arrived 15 minutes late" },
+  { id: "att-2024-12-04-sub-003", studentId: "std-001", date: "2024-12-04", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-12-09-sub-003", studentId: "std-001", date: "2024-12-09", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+  { id: "att-2024-12-11-sub-003", studentId: "std-001", date: "2024-12-11", status: "present", subject: "Software Engineering", timeIn: "14:00", timeOut: "15:30" },
+
+  // Computer Networks - Total: 30 classes, Present: 28, Late: 0, Absent: 1, Excused: 1
+  { id: "att-2024-09-03-sub-004", studentId: "std-001", date: "2024-09-03", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-05-sub-004", studentId: "std-001", date: "2024-09-05", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-10-sub-004", studentId: "std-001", date: "2024-09-10", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-12-sub-004", studentId: "std-001", date: "2024-09-12", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-17-sub-004", studentId: "std-001", date: "2024-09-17", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-19-sub-004", studentId: "std-001", date: "2024-09-19", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-24-sub-004", studentId: "std-001", date: "2024-09-24", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-09-26-sub-004", studentId: "std-001", date: "2024-09-26", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-01-sub-004", studentId: "std-001", date: "2024-10-01", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-03-sub-004", studentId: "std-001", date: "2024-10-03", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-08-sub-004", studentId: "std-001", date: "2024-10-08", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-10-sub-004", studentId: "std-001", date: "2024-10-10", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-15-sub-004", studentId: "std-001", date: "2024-10-15", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-17-sub-004", studentId: "std-001", date: "2024-10-17", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-22-sub-004", studentId: "std-001", date: "2024-10-22", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-24-sub-004", studentId: "std-001", date: "2024-10-24", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-29-sub-004", studentId: "std-001", date: "2024-10-29", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-10-31-sub-004", studentId: "std-001", date: "2024-10-31", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-05-sub-004", studentId: "std-001", date: "2024-11-05", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-07-sub-004", studentId: "std-001", date: "2024-11-07", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-12-sub-004", studentId: "std-001", date: "2024-11-12", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-14-sub-004", studentId: "std-001", date: "2024-11-14", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-19-sub-004", studentId: "std-001", date: "2024-11-19", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-11-21-sub-004", studentId: "std-001", date: "2024-11-21", status: "excused", subject: "Computer Networks" },
+  { id: "att-2024-11-26-sub-004", studentId: "std-001", date: "2024-11-26", status: "absent", subject: "Computer Networks" },
+  { id: "att-2024-11-28-sub-004", studentId: "std-001", date: "2024-11-28", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-03-sub-004", studentId: "std-001", date: "2024-12-03", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-05-sub-004", studentId: "std-001", date: "2024-12-05", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-10-sub-004", studentId: "std-001", date: "2024-12-10", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" },
+  { id: "att-2024-12-12-sub-004", studentId: "std-001", date: "2024-12-12", status: "present", subject: "Computer Networks", timeIn: "09:00", timeOut: "10:30" }
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
 export const generateMockAttendance = (): AttendanceRecord[] => {
-  const records: AttendanceRecord[] = [];
-  const startDate = new Date("2024-09-01");
-  const endDate = new Date();
-
-  for (
-    let date = new Date(startDate);
-    date <= endDate;
-    date.setDate(date.getDate() + 1)
-  ) {
-    const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
-
-    mockSubjects.forEach((subject) => {
-      const hasClassToday = subject.schedule.some(
-        (schedule) => schedule.day === dayName
-      );
-
-      if (hasClassToday && Math.random() > 0.1) {
-        const statuses: Array<"present" | "absent" | "late" | "excused"> = [
-          "present",
-          "absent",
-          "late",
-          "excused",
-        ];
-        const weights = [0.75, 0.15, 0.08, 0.02];
-
-        let randomValue = Math.random();
-        let selectedStatus: (typeof statuses)[0] = "present";
-
-        for (let i = 0; i < weights.length; i++) {
-          if (randomValue < weights[i]) {
-            selectedStatus = statuses[i];
-            break;
-          }
-          randomValue -= weights[i];
-        }
-
-        records.push({
-          id: `att-${date.toISOString().split("T")[0]}-${subject.id}`,
-          studentId: mockStudent.id,
-          date: date.toISOString().split("T")[0],
-          status: selectedStatus,
-          subject: subject.name,
-          timeIn: selectedStatus === "present" ? "09:00" : undefined,
-          timeOut: selectedStatus === "present" ? "10:30" : undefined,
-          notes:
-            selectedStatus === "late" ? "Arrived 15 minutes late" : undefined,
-        });
-      }
-    });
-  }
-
-  return records.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  return mockAttendanceData;
 };
 
 export const mockMedicalLeaves: MedicalLeave[] = [
