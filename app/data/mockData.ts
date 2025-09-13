@@ -1307,7 +1307,7 @@ export const mockMedicalLeaves: MedicalLeave[] = [
     documents: ["emergency-letter-001.pdf"],
     submittedDate: "2024-11-19",
   },
-] as AttendanceRecord[];
+];
 
 export const mockNotifications: Notification[] = [
   {
