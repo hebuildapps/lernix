@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { checkAuth } from "../../utils/auth";
 
 interface MenuItem {
   id: string;
@@ -11,18 +12,23 @@ interface MenuItem {
   icon: string;
 }
 
-const menuItems: MenuItem[] = [
-  { id: "dashboard", label: "Dashboard", href: "/", icon: "📊" },
+const studentMenuItems: MenuItem[] = [
+  { id: "dashboard", label: "Dashboard", href: "/student", icon: "📊" },
   { id: "attendance", label: "Attendance", href: "/attendance", icon: "📅" },
   { id: "medical", label: "Medical Leave", href: "/medical", icon: "🏥" },
   { id: "academic", label: "Academic Hub", href: "/academic", icon: "📚" },
-  {
-    id: "notifications",
-    label: "Notifications",
-    href: "/notifications",
-    icon: "🔔",
-  },
+  { id: "notifications", label: "Notifications", href: "/notifications", icon: "🔔" },
   { id: "profile", label: "Profile", href: "/profile", icon: "👤" },
+];
+
+const teacherMenuItems: MenuItem[] = [
+  { id: "dashboard", label: "Dashboard", href: "/teacher/dashboard", icon: "📊" },
+  { id: "attendance", label: "Attendance", href: "/teacher/attendance", icon: "📅" },
+  { id: "analytics", label: "Analytics", href: "/teacher/analytics/subject", icon: "📈" },
+  { id: "calendar", label: "Academic Calendar", href: "/teacher/calendar/planning", icon: "📅" },
+  { id: "medical", label: "Medical Reviews", href: "/teacher/medical", icon: "🏥" },
+  { id: "academic", label: "Content Hub", href: "/teacher/academic", icon: "📚" },
+  { id: "profile", label: "Profile", href: "/teacher/profile", icon: "👤" },
 ];
 
 interface SidebarProps {
@@ -32,6 +38,18 @@ interface SidebarProps {
 
 export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
   const pathname = usePathname();
+  const [userRole, setUserRole] = useState<string>('');
+
+  useEffect(() => {
+    const { userRole } = checkAuth();
+    setUserRole(userRole || '');
+  }, []);
+
+  const menuItems = userRole === 'teacher' ? teacherMenuItems : studentMenuItems;
+  const portalType = userRole === 'teacher' ? 'Teacher Portal' : 'Student Portal';
+  const userName = userRole === 'teacher' ? 'Dr. Priya Sharma' : 'Heramb Salunkhe';
+  const userCode = userRole === 'teacher' ? 'MITWPU-CS-001' : 'LX2024001';
+  const userInitials = userRole === 'teacher' ? 'PS' : 'HS';
 
   return (
     <>
@@ -56,7 +74,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Lernix</h1>
-                <p className="text-sm text-gray-500">Student Portal</p>
+                <p className="text-sm text-gray-500">{portalType}</p>
               </div>
             </div>
 
@@ -98,13 +116,13 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                <span className="text-gray-600 font-medium">HS</span>
+                <span className="text-gray-600 font-medium">{userInitials}</span>
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium text-gray-900 truncate">
-                  Heramb Salunkhe
+                  {userName}
                 </p>
-                <p className="text-xs text-gray-500 truncate">LX2024001</p>
+                <p className="text-xs text-gray-500 truncate">{userCode}</p>
               </div>
             </div>
           </div>
