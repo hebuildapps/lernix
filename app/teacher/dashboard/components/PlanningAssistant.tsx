@@ -11,8 +11,8 @@ interface PlanningAssistantProps {
 }
 
 export default function PlanningAssistant({
-  currentMonth,
-  currentYear,
+  currentMonth: _currentMonth,
+  currentYear: _currentYear,
   suggestions = [],
   onPlanningSelect
 }: PlanningAssistantProps) {

@@ -76,13 +76,13 @@ export default function StudentGrid({
         </div>
         <div className="flex items-center space-x-2">
           <button
-            onClick={() => setSortBy('grid' as any)}
+            onClick={() => {/* View mode functionality would be implemented here */}}
             className={`p-2 rounded ${viewMode === 'grid' ? 'bg-blue-100 text-blue-600' : 'text-gray-600 hover:bg-gray-100'}`}
           >
             ⊞
           </button>
           <button
-            onClick={() => setSortBy('list' as any)}
+            onClick={() => {/* View mode functionality would be implemented here */}}
             className={`p-2 rounded ${viewMode === 'list' ? 'bg-blue-100 text-blue-600' : 'text-gray-600 hover:bg-gray-100'}`}
           >
             ☰
@@ -120,7 +120,7 @@ export default function StudentGrid({
         <div className="flex space-x-2">
           <select
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as any)}
+            onChange={(e) => setSortBy(e.target.value as 'name' | 'attendance' | 'status')}
             className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
             <option value="name">Sort by Name</option>
@@ -129,7 +129,7 @@ export default function StudentGrid({
           </select>
           <select
             value={filterStatus}
-            onChange={(e) => setFilterStatus(e.target.value as any)}
+            onChange={(e) => setFilterStatus(e.target.value as 'all' | 'good' | 'warning' | 'critical')}
             className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
             <option value="all">All Students</option>

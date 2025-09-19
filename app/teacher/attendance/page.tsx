@@ -76,7 +76,7 @@ export default function TeacherAttendancePage() {
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-            <p className="text-sm text-gray-600">Today's Date</p>
+            <p className="text-sm text-gray-600">Today&apos;s Date</p>
             <p className="text-lg font-bold text-gray-900">
               {new Date().toLocaleDateString()}
             </p>

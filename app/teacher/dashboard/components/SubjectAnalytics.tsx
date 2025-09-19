@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { SubjectAnalytics, ClassPerformance, AttendanceHeatmapData } from '../../types/teacher';
+import type { SubjectAnalytics } from '../../types/teacher';
 
 interface SubjectAnalyticsProps {
   subjectData: SubjectAnalytics;
@@ -12,8 +12,6 @@ interface SubjectAnalyticsProps {
 
 export default function SubjectAnalytics({
   subjectData,
-  dateRange,
-  classFilter,
   showComparison = true
 }: SubjectAnalyticsProps) {
   const [activeTab, setActiveTab] = useState<'overview' | 'heatmap' | 'defaulters'>('overview');
@@ -185,7 +183,7 @@ export default function SubjectAnalytics({
         <div className="flex items-center space-x-2">
           <select
             value={selectedPeriod}
-            onChange={(e) => setSelectedPeriod(e.target.value as any)}
+            onChange={(e) => setSelectedPeriod(e.target.value as 'week' | 'month' | 'semester')}
             className="px-3 py-1 text-xs border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
             <option value="week">This Week</option>

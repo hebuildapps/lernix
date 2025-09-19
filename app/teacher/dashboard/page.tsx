@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Layout from '../../components/layout/Layout';
 import { checkAuth } from '../../utils/auth';
@@ -22,7 +22,6 @@ import { SubjectAnalytics as SubjectAnalyticsType } from '../types/teacher';
 
 export default function TeacherDashboard() {
   const router = useRouter();
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const currentMonth = new Date().getMonth();
   const currentYear = new Date().getFullYear();
 
@@ -59,7 +58,7 @@ export default function TeacherDashboard() {
     alert(`Notification sent to ${studentIds.length} students`);
   };
 
-  const handlePlanningSelect = (suggestion: any) => {
+  const handlePlanningSelect = (suggestion: unknown) => {
     console.log('Selected planning suggestion:', suggestion);
   };
 
@@ -162,7 +161,7 @@ export default function TeacherDashboard() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <button className="flex flex-col items-center space-y-2 p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
               <span className="text-2xl">✅</span>
-              <span className="text-sm font-medium text-blue-800">Mark Today's Attendance</span>
+              <span className="text-sm font-medium text-blue-800">Mark Today&apos;s Attendance</span>
             </button>
             <button className="flex flex-col items-center space-y-2 p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-colors">
               <span className="text-2xl">📈</span>
@@ -215,7 +214,7 @@ export default function TeacherDashboard() {
               year={currentYear}
               holidays={mockHolidays}
               events={mockAcademicEvents}
-              onDateSelect={setSelectedDate}
+              onDateSelect={() => {}}
               showPlanningInsights={true}
             />
 

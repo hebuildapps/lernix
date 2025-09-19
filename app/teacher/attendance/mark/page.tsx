@@ -26,7 +26,7 @@ export default function MarkAttendancePage() {
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Mark Attendance</h1>
             <p className="text-gray-600 mt-1">
-              Record student attendance for today's session
+              Record student attendance for today&apos;s session
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">

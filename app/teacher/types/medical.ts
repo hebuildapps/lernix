@@ -1,4 +1,3 @@
-import { StudentWithAttendance } from './teacher';
 
 export interface MedicalLeaveSubmission {
   id: string;

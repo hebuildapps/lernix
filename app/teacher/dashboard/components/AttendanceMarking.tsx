@@ -12,8 +12,8 @@ interface AttendanceMarkingProps {
 }
 
 export default function AttendanceMarking({
-  classId,
-  subjectId,
+  classId: _classId,
+  subjectId: _subjectId,
   students,
   onMarkAttendance,
   sessionDate = new Date()
@@ -47,7 +47,7 @@ export default function AttendanceMarking({
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
       alert('Attendance submitted successfully!');
-    } catch (error) {
+    } catch (_error) {
       alert('Error submitting attendance');
     } finally {
       setIsSubmitting(false);
@@ -144,7 +144,6 @@ export default function AttendanceMarking({
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
         {filteredStudents.map((student) => {
           const attendanceStatus = attendanceMap[student.id];
-          const isMarked = attendanceStatus !== undefined;
 
           return (
             <div

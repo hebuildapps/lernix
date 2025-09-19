@@ -201,7 +201,7 @@ export default function TeacherAcademicHub() {
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-            <p className="text-sm text-gray-600">Today's Date</p>
+            <p className="text-sm text-gray-600">Today&apos;s Date</p>
             <p className="text-lg font-bold text-gray-900">
               {new Date().toLocaleDateString()}
             </p>
@@ -526,7 +526,7 @@ export default function TeacherAcademicHub() {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Today's Topic</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Today&apos;s Topic</label>
                       <input
                         type="text"
                         value={abstractForm.topic}

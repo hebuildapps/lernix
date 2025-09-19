@@ -74,7 +74,7 @@ export default function LoginPage() {
           <p className="text-sm text-gray-500 mt-1">
             Built during{" "}
             <i>
-              <strong>SIH'25</strong>
+              <strong>SIH&apos;25</strong>
             </i>
           </p>
         </div>

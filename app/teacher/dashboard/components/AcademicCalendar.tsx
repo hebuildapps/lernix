@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Holiday, CalendarDay, AcademicEvent } from '../../types/calendar';
+import { Holiday, AcademicEvent } from '../../types/calendar';
 
 interface AcademicCalendarProps {
   month: number;

@@ -43,7 +43,7 @@ export default function AcademicPlanningPage() {
     setSelectedDate(date);
   };
 
-  const handlePlanningSelect = (suggestion: any) => {
+  const handlePlanningSelect = (suggestion: unknown) => {
     console.log('Planning suggestion selected:', suggestion);
   };
 
@@ -84,7 +84,7 @@ export default function AcademicPlanningPage() {
           <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-blue-900">This Month's Holidays</p>
+                <p className="text-sm font-medium text-blue-900">This Month&apos;s Holidays</p>
                 <p className="text-2xl font-bold text-blue-600">
                   {mockHolidays.filter(h =>
                     h.date.getMonth() === currentMonth && h.date.getFullYear() === currentYear
