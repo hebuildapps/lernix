@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-export type UserRole = 'student' | 'teacher' | 'admin';
+export type UserRole = 'student' | 'teacher' | 'admin' | 'hod';
 
 interface AuthContextType {
   isAuthenticated: boolean;

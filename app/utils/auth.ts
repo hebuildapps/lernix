@@ -4,7 +4,8 @@ export const authConfig = {
   credentials: {
     student: { password: 'student123', redirect: '/student' },
     teacher: { password: 'teacher123', redirect: '/teacher/dashboard' },
-    admin: { password: 'admin123', redirect: '/admin' }
+    admin: { password: 'admin123', redirect: '/admin' },
+    hod: { password: 'hod123', redirect: '/hod/dashboard' }
   }
 };
 

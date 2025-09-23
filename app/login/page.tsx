@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
-type UserRole = "student" | "teacher" | "admin";
+type UserRole = "student" | "teacher" | "admin" | "hod";
 
 export default function LoginPage() {
   const [selectedRole, setSelectedRole] = useState<UserRole | null>(null);
@@ -16,6 +16,7 @@ export default function LoginPage() {
     student: { password: "student123", redirect: "/student" },
     teacher: { password: "teacher123", redirect: "/teacher/dashboard" },
     admin: { password: "admin123", redirect: "/admin" },
+    hod: { password: "hod123", redirect: "/hod/dashboard" },
   };
 
   const handleRoleSelect = (role: UserRole) => {
@@ -129,11 +130,31 @@ export default function LoginPage() {
                 </button>
 
                 <button
-                  onClick={() => handleRoleSelect("admin")}
+                  onClick={() => handleRoleSelect("hod")}
                   className="w-full flex items-center space-x-4 p-4 border-2 border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-all duration-200 group"
                 >
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center group-hover:bg-purple-200 transition-colors">
                     <span className="text-2xl">👨‍💼</span>
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-semibold text-gray-900">
+                      Head of Department
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Department management dashboard
+                    </p>
+                  </div>
+                  <div className="ml-auto">
+                    <span className="text-gray-400">→</span>
+                  </div>
+                </button>
+
+                <button
+                  onClick={() => handleRoleSelect("admin")}
+                  className="w-full flex items-center space-x-4 p-4 border-2 border-gray-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-all duration-200 group"
+                >
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-orange-200 transition-colors">
+                    <span className="text-2xl">⚙️</span>
                   </div>
                   <div className="text-left">
                     <h3 className="font-semibold text-gray-900">
@@ -165,7 +186,9 @@ export default function LoginPage() {
                       ? "bg-blue-100"
                       : selectedRole === "teacher"
                       ? "bg-green-100"
-                      : "bg-purple-100"
+                      : selectedRole === "hod"
+                      ? "bg-purple-100"
+                      : "bg-orange-100"
                   }`}
                 >
                   <span className="text-2xl">
@@ -173,18 +196,22 @@ export default function LoginPage() {
                       ? "🎓"
                       : selectedRole === "teacher"
                       ? "👨‍🏫"
-                      : "👨‍💼"}
+                      : selectedRole === "hod"
+                      ? "👨‍💼"
+                      : "⚙️"}
                   </span>
                 </div>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-2 capitalize">
-                  {selectedRole} Login
+                  {selectedRole === "hod" ? "HoD" : selectedRole} Login
                 </h2>
                 <p className="text-gray-600">
                   {selectedRole === "student" &&
                     "Enter your student credentials"}
                   {selectedRole === "teacher" &&
                     "Enter your teacher credentials"}
+                  {selectedRole === "hod" &&
+                    "Enter your HoD credentials"}
                   {selectedRole === "admin" && "Administration access"}
                 </p>
               </div>
@@ -209,7 +236,7 @@ export default function LoginPage() {
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Enter Access Password
-                    </label>
+                    </label> 
                     <input
                       type="password"
                       value={password}
@@ -234,7 +261,9 @@ export default function LoginPage() {
                         ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                         : selectedRole === "student"
                         ? "bg-blue-600 hover:bg-blue-700 text-white"
-                        : "bg-green-600 hover:bg-green-700 text-white"
+                        : selectedRole === "teacher"
+                        ? "bg-green-600 hover:bg-green-700 text-white"
+                        : "bg-purple-600 hover:bg-purple-700 text-white"
                     }`}
                   >
                     {isLoading ? "Signing in..." : "Sign In"}
