@@ -14,7 +14,6 @@ interface ProgramComparisonProps {
 export default function ProgramComparison({
   programs,
   comparisonMetric,
-  timeRange,
   onProgramSelect
 }: ProgramComparisonProps) {
   const [selectedMetric, setSelectedMetric] = useState<'attendance' | 'defaulters' | 'faculty_performance'>(comparisonMetric);
@@ -83,7 +82,7 @@ export default function ProgramComparison({
           {/* Metric Selector */}
           <select
             value={selectedMetric}
-            onChange={(e) => setSelectedMetric(e.target.value as any)}
+            onChange={(e) => setSelectedMetric(e.target.value as 'attendance' | 'defaulters' | 'faculty_performance')}
             className="border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
           >
             <option value="attendance">Attendance Rate</option>
@@ -190,7 +189,7 @@ export default function ProgramComparison({
                   onClick={(data) => onProgramSelect(data.id)}
                   style={{ cursor: 'pointer' }}
                 >
-                  {chartData.map((entry, index) => (
+                  {chartData.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
@@ -221,7 +220,7 @@ export default function ProgramComparison({
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {chartData.map((program, index) => (
+            {chartData.map((program) => (
               <tr key={program.id} className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div>

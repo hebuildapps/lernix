@@ -12,7 +12,6 @@ interface DepartmentOverviewProps {
 }
 
 export default function DepartmentOverview({
-  departmentId,
   programs,
   overallStats,
   onDrillDown

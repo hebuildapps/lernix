@@ -9,8 +9,6 @@ import {
   YearStats,
   SectionStats,
   FacultySummary,
-  SubjectAssignment,
-  ClassAssignment
 } from '../types/hod';
 
 export const mockHoDUser: HoDUser = {
@@ -261,7 +259,7 @@ export const mockFacultyWithPerformance: FacultyWithPerformance[] = mockFaculty.
   ],
   attendanceUpdateCompliance: Math.floor(Math.random() * 20) + 80,
   lastUpdateDate: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000),
-  performanceRating: ['excellent', 'good', 'needs_improvement'][Math.floor(Math.random() * 3)] as any,
+  performanceRating: ['excellent', 'good', 'needs_improvement'][Math.floor(Math.random() * 3)] as 'excellent' | 'good' | 'needs_improvement',
   totalStudentsHandled: Math.floor(Math.random() * 100) + 50,
   averageClassAttendance: Math.floor(Math.random() * 15) + 78,
   notificationsSent: Math.floor(Math.random() * 20) + 5,

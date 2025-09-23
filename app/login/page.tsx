@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 type UserRole = "student" | "teacher" | "admin" | "hod";
 
@@ -64,7 +65,7 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
             <div className="w-16 h-16 bg-transparent rounded-xl flex items-center justify-center">
-              <img src="/logo.png" alt="Lernix Logo" className="w-14 h-14" />
+              <Image src="/logo.png" alt="Lernix Logo" width={56} height={56} />
             </div>
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Lernix</h1>

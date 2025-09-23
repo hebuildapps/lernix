@@ -72,7 +72,7 @@ export default function FacultyGrid({
           {/* Sort Selector */}
           <select
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as any)}
+            onChange={(e) => setSortBy(e.target.value as 'name' | 'compliance' | 'performance' | 'students')}
             className="border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
           >
             <option value="compliance">Sort by Compliance</option>
@@ -84,7 +84,7 @@ export default function FacultyGrid({
           {/* Performance Filter */}
           <select
             value={filterPerformance}
-            onChange={(e) => setFilterPerformance(e.target.value as any)}
+            onChange={(e) => setFilterPerformance(e.target.value as 'all' | 'excellent' | 'good' | 'needs_improvement')}
             className="border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
           >
             <option value="all">All Performance</option>

@@ -85,7 +85,7 @@ export default function DefaultersAlert({
           {/* Sort Selector */}
           <select
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as any)}
+            onChange={(e) => setSortBy(e.target.value as 'attendance' | 'risk' | 'name' | 'program')}
             className="border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-red-500 focus:border-red-500"
           >
             <option value="risk">Sort by Risk</option>
@@ -97,7 +97,7 @@ export default function DefaultersAlert({
           {/* Risk Filter */}
           <select
             value={filterRisk}
-            onChange={(e) => setFilterRisk(e.target.value as any)}
+            onChange={(e) => setFilterRisk(e.target.value as 'all' | 'critical' | 'high' | 'moderate')}
             className="border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-red-500 focus:border-red-500"
           >
             <option value="all">All Risk Levels</option>

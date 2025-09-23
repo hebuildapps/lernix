@@ -19,7 +19,6 @@ import {
   mockDepartmentDefaulters,
   mockQuickActions,
   mockTimeRanges,
-  mockComparisonMetrics
 } from '../data/mockHoDData';
 
 export default function HoDDashboard() {
