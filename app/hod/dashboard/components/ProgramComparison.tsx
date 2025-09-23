@@ -158,7 +158,7 @@ export default function ProgramComparison({
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip
-                  formatter={(value, name) => [
+                  formatter={(value) => [
                     `${Number(value).toFixed(1)}${getMetricUnit()}`,
                     getMetricLabel()
                   ]}
@@ -171,7 +171,7 @@ export default function ProgramComparison({
                   dataKey="value"
                   fill="#8b5cf6"
                   name={getMetricLabel()}
-                  onClick={(data) => onProgramSelect(data.id)}
+                  onClick={(data) => data.id && onProgramSelect(data.id)}
                   style={{ cursor: 'pointer' }}
                 />
               </BarChart>
@@ -182,11 +182,11 @@ export default function ProgramComparison({
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ name, value }) => `${name}: ${value.toFixed(1)}${getMetricUnit()}`}
+                  label={({ name, value }) => `${name}: ${Number(value).toFixed(1)}${getMetricUnit()}`}
                   outerRadius={80}
                   fill="#8884d8"
                   dataKey="value"
-                  onClick={(data) => onProgramSelect(data.id)}
+                  onClick={(data) => data.id && onProgramSelect(data.id)}
                   style={{ cursor: 'pointer' }}
                 >
                   {chartData.map((_, index) => (

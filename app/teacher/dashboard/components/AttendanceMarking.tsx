@@ -12,8 +12,8 @@ interface AttendanceMarkingProps {
 }
 
 export default function AttendanceMarking({
-  classId: _classId,
-  subjectId: _subjectId,
+  classId,
+  subjectId,
   students,
   onMarkAttendance,
   sessionDate = new Date()
@@ -47,7 +47,7 @@ export default function AttendanceMarking({
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
       alert('Attendance submitted successfully!');
-    } catch (_error) {
+    } catch (error) {
       alert('Error submitting attendance');
     } finally {
       setIsSubmitting(false);
