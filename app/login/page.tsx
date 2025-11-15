@@ -242,7 +242,7 @@ export default function LoginPage() {
                       type="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Enter your password"
+                      placeholder="Use *role123* i.e. student123, teacher123 etc."
                       className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                       required
                     />
