@@ -60,7 +60,6 @@ export interface Notification {
 
 export interface AcademicContent {
   id: string;
-  subjectId: string;
   type: 'lecture' | 'assignment' | 'quiz' | 'exam' | 'material';
   title: string;
   description: string;
