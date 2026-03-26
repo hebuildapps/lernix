@@ -199,8 +199,6 @@ export default function AcademicPlanningPage() {
           {/* Planning Assistant */}
           <div>
             <PlanningAssistant
-              currentMonth={currentMonth}
-              currentYear={currentYear}
               suggestions={mockPlanningSuggestions}
               onPlanningSelect={handlePlanningSelect}
             />
