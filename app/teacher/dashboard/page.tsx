@@ -217,8 +217,6 @@ export default function TeacherDashboard() {
 
             {/* Planning Assistant */}
             <PlanningAssistant
-              currentMonth={currentMonth}
-              currentYear={currentYear}
               suggestions={mockPlanningSuggestions}
               onPlanningSelect={handlePlanningSelect}
             />
