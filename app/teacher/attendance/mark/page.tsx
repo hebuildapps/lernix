@@ -101,8 +101,6 @@ export default function MarkAttendancePage() {
 
         {/* Attendance Marking Component */}
         <AttendanceMarking
-          classId={selectedClass}
-          subjectId="sub-001"
           students={mockStudentsCS301}
           onMarkAttendance={handleMarkAttendance}
           sessionDate={new Date(sessionDate)}
