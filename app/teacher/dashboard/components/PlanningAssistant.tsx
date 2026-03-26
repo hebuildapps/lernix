@@ -4,15 +4,11 @@ import React from 'react';
 import { PlanningSuggestion } from '../../types/calendar';
 
 interface PlanningAssistantProps {
-  currentMonth: number;
-  currentYear: number;
   suggestions: PlanningSuggestion[];
   onPlanningSelect?: (suggestion: PlanningSuggestion) => void;
 }
 
 export default function PlanningAssistant({
-  currentMonth,
-  currentYear,
   suggestions = [],
   onPlanningSelect
 }: PlanningAssistantProps) {

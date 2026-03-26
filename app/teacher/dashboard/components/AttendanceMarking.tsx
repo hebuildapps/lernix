@@ -4,16 +4,12 @@ import React, { useState } from 'react';
 import { StudentWithAttendance } from '../../types/teacher';
 
 interface AttendanceMarkingProps {
-  classId: string;
-  subjectId: string;
   students: StudentWithAttendance[];
   onMarkAttendance: (studentId: string, status: 'present' | 'absent') => void;
   sessionDate?: Date;
 }
 
 export default function AttendanceMarking({
-  classId,
-  subjectId,
   students,
   onMarkAttendance,
   sessionDate = new Date()
@@ -47,7 +43,7 @@ export default function AttendanceMarking({
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
       alert('Attendance submitted successfully!');
-    } catch (error) {
+    } catch{
       alert('Error submitting attendance');
     } finally {
       setIsSubmitting(false);
