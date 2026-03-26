@@ -29,7 +29,6 @@ export interface AcademicEvent {
   title: string;
   date: Date;
   type: 'assignment' | 'test' | 'exam' | 'submission' | 'activity';
-  subjectId: string;
   description?: string;
   isOptimal: boolean;
 }

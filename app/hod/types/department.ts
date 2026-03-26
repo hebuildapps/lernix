@@ -183,7 +183,6 @@ export interface Holiday {
 export interface ExamSchedule {
   id: string;
   examType: 'unit_test' | 'mid_term' | 'end_term' | 'supplementary';
-  subjectId: string;
   subjectName: string;
   subjectCode: string;
   date: Date;

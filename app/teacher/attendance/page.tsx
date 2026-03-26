@@ -34,7 +34,6 @@ export default function TeacherAttendancePage() {
   };
 
   const mockSubjectAnalytics: SubjectAnalyticsType = {
-    subjectId: 'sub-001',
     subjectName: selectedSubject,
     totalClasses: 45,
     averageAttendance: 82.4,
@@ -172,8 +171,6 @@ export default function TeacherAttendancePage() {
           <div>
             {activeTab === 'mark' && (
               <AttendanceMarking
-                classId={selectedClass}
-                subjectId="sub-001"
                 students={mockStudentsCS301}
                 onMarkAttendance={handleMarkAttendance}
                 sessionDate={new Date()}

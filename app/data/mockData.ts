@@ -1349,7 +1349,6 @@ export const mockNotifications: Notification[] = [
 export const mockAcademicContent: AcademicContent[] = [
   {
     id: "ac-001",
-    subjectId: "sub-001",
     type: "assignment",
     title: "Binary Tree Implementation",
     description:
@@ -1361,7 +1360,6 @@ export const mockAcademicContent: AcademicContent[] = [
   },
   {
     id: "ac-002",
-    subjectId: "sub-002",
     type: "lecture",
     title: "SQL Joins and Subqueries",
     description:
@@ -1372,7 +1370,6 @@ export const mockAcademicContent: AcademicContent[] = [
   },
   {
     id: "ac-003",
-    subjectId: "sub-003",
     type: "quiz",
     title: "Software Development Life Cycle Quiz",
     description:

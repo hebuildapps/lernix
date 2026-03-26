@@ -12,7 +12,6 @@ export default function SubjectAnalyticsPage() {
   const [selectedClass, setSelectedClass] = useState('all');
 
   const mockSubjectAnalytics: SubjectAnalyticsType = {
-    subjectId: 'sub-001',
     subjectName: selectedSubject,
     totalClasses: 45,
     averageAttendance: 82.4,

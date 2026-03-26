@@ -237,7 +237,6 @@ export const mockFacultyWithPerformance: FacultyWithPerformance[] = mockFaculty.
   ...faculty,
   subjects: [
     {
-      subjectId: `sub-${index + 1}`,
       subjectName: 'Data Structures & Algorithms',
       subjectCode: 'CS301',
       classes: ['TE-A', 'TE-B'],
@@ -247,7 +246,6 @@ export const mockFacultyWithPerformance: FacultyWithPerformance[] = mockFaculty.
   ],
   classesAssigned: [
     {
-      classId: `class-${index + 1}`,
       className: 'TE-A',
       year: 'TE',
       section: 'A',
@@ -274,9 +272,7 @@ export const mockAttendanceCorrections: AttendanceCorrection[] = [
     studentName: 'Rahul Sharma',
     facultyId: 'fac-001',
     facultyName: 'Dr. Priya Sharma',
-    classId: 'class-001',
     className: 'TE-A',
-    subjectId: 'sub-001',
     subjectName: 'Data Structures & Algorithms',
     originalDate: new Date('2024-09-20'),
     originalStatus: 'absent',
@@ -294,9 +290,7 @@ export const mockAttendanceCorrections: AttendanceCorrection[] = [
     studentName: 'Priya Patel',
     facultyId: 'fac-002',
     facultyName: 'Prof. Amit Patel',
-    classId: 'class-002',
     className: 'SE-B',
-    subjectId: 'sub-002',
     subjectName: 'Database Management Systems',
     originalDate: new Date('2024-09-19'),
     originalStatus: 'absent',
@@ -321,7 +315,6 @@ export const mockDepartmentDefaulters: DepartmentDefaulter[] = [
     overallAttendance: 68.5,
     criticalSubjects: [
       {
-        subjectId: 'sub-001',
         subjectName: 'Data Structures & Algorithms',
         attendancePercentage: 62.0,
         classesMissed: 12,
@@ -329,7 +322,6 @@ export const mockDepartmentDefaulters: DepartmentDefaulter[] = [
         faculty: mockFaculty[0]
       },
       {
-        subjectId: 'sub-002',
         subjectName: 'Database Management Systems',
         attendancePercentage: 58.5,
         classesMissed: 14,
@@ -357,7 +349,6 @@ export const mockDepartmentDefaulters: DepartmentDefaulter[] = [
     overallAttendance: 72.3,
     criticalSubjects: [
       {
-        subjectId: 'sub-003',
         subjectName: 'Computer Networks',
         attendancePercentage: 69.0,
         classesMissed: 9,

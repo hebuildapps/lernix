@@ -63,7 +63,6 @@ export default function TeacherDashboard() {
   };
 
   const mockSubjectAnalytics: SubjectAnalyticsType = {
-    subjectId: 'sub-001',
     subjectName: 'Data Structures & Algorithms',
     totalClasses: 45,
     averageAttendance: 82.4,
@@ -184,8 +183,6 @@ export default function TeacherDashboard() {
           <div className="xl:col-span-2 space-y-8">
             {/* Today's Attendance Marking */}
             <AttendanceMarking
-              classId="CS301-A"
-              subjectId="sub-001"
               students={mockStudentsCS301}
               onMarkAttendance={handleMarkAttendance}
               sessionDate={todaysDate}

@@ -14,7 +14,7 @@ export default function AcademicHub({ content, subjects }: AcademicHubProps) {
 
   const filteredContent = content.filter(item => {
     const typeMatch = filter === 'all' || item.type === filter;
-    const subjectMatch = selectedSubject === 'all' || item.subjectId === selectedSubject;
+    const subjectMatch = selectedSubject === 'all';
     return typeMatch && subjectMatch && item.status === 'published';
   });
 
@@ -59,11 +59,6 @@ export default function AcademicHub({ content, subjects }: AcademicHubProps) {
     const diffTime = due.getTime() - today.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return diffDays >= 0 && diffDays <= 7;
-  };
-
-  const getSubjectName = (subjectId: string) => {
-    const subject = subjects.find(s => s.id === subjectId);
-    return subject ? subject.name : 'Unknown Subject';
   };
 
   const typeOptions = [
@@ -143,9 +138,6 @@ export default function AcademicHub({ content, subjects }: AcademicHubProps) {
               <p className="text-sm text-gray-600 mb-3 line-clamp-3">{item.description}</p>
 
               <div className="space-y-2 mb-4">
-                <p className="text-xs text-blue-600 font-medium">
-                  {getSubjectName(item.subjectId)}
-                </p>
                 <p className="text-xs text-gray-500">
                   Published: {new Date(item.publishedDate).toLocaleDateString()}
                 </p>

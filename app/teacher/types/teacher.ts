@@ -35,7 +35,6 @@ export interface BasicSession {
 }
 
 export interface SubjectAnalytics {
-  subjectId: string;
   subjectName: string;
   totalClasses: number;
   averageAttendance: number;

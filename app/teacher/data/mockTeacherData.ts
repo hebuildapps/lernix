@@ -320,7 +320,6 @@ export const mockAcademicEvents: AcademicEvent[] = [
     title: "Data Structures Quiz 3",
     date: new Date("2025-01-15"),
     type: 'test',
-    subjectId: "sub-001",
     description: "Quiz on Trees and Graphs",
     isOptimal: true
   },
@@ -329,7 +328,6 @@ export const mockAcademicEvents: AcademicEvent[] = [
     title: "Database Project Submission",
     date: new Date("2025-01-28"),
     type: 'submission',
-    subjectId: "sub-002",
     description: "Final project deadline",
     isOptimal: false
   }

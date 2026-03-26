@@ -66,7 +66,6 @@ export interface FacultyWithPerformance extends FacultySummary {
 }
 
 export interface SubjectAssignment {
-  subjectId: string;
   subjectName: string;
   subjectCode: string;
   classes: string[];
@@ -75,7 +74,6 @@ export interface SubjectAssignment {
 }
 
 export interface ClassAssignment {
-  classId: string;
   className: string;
   year: string;
   section: string;
@@ -108,9 +106,7 @@ export interface AttendanceCorrection {
   studentName: string;
   facultyId: string;
   facultyName: string;
-  classId: string;
   className: string;
-  subjectId: string;
   subjectName: string;
   originalDate: Date;
   originalStatus: 'present' | 'absent';
@@ -142,7 +138,6 @@ export interface DepartmentDefaulter {
 }
 
 export interface CriticalSubject {
-  subjectId: string;
   subjectName: string;
   attendancePercentage: number;
   classesMissed: number;
